@@ -1,0 +1,22 @@
+name: Rename Template to Plugin Name
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Remove this workflow file
+        run: |
+          rm .github/workflows/template-init.yml
+
+      - uses: kota65535/github-template-rename-action@v1
+        with:
+          from-name: HytalePluginTemplate
+          to-name: ${{ github.event.repository.name }}
+          github-token: ${{ secrets.PERSONAL_TOKEN }}
