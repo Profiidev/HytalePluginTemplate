@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
 
       - name: Remove this workflow file
         run: |
@@ -19,4 +21,3 @@ jobs:
         with:
           from-name: HytalePluginTemplate
           to-name: TestName
-          github-token: ${{ secrets.PERSONAL_TOKEN }}
