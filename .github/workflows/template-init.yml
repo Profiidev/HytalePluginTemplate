@@ -18,5 +18,5 @@ jobs:
       - uses: kota65535/github-template-rename-action@v1
         with:
           from-name: HytalePluginTemplate
-          to-name: ${{ github.event.repository.name }}
+          to-name: TestName
           github-token: ${{ secrets.PERSONAL_TOKEN }}
