@@ -13,7 +13,7 @@ jobs:
 
       - name: Remove this workflow file
         run: |
-          NAME="${{ github.event.repository.name }}"
+          NAME="${{ github.event.repository.name }}Test"
           rm .github/workflows/template-init.yml
           # Replace HytalePluginTemplate in settings.gradle
           sed -i "s/HytalePluginTemplate/$NAME/g" settings.gradle
