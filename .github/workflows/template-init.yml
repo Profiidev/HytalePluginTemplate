@@ -18,6 +18,8 @@ jobs:
           rm .github/workflows/template-init.yml
 
       - uses: kota65535/github-template-rename-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         with:
           from-name: HytalePluginTemplate
           to-name: TestName
