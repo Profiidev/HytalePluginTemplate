@@ -44,3 +44,4 @@ bin/
 .DS_Store
 
 /run/
+/tmp-ruleset.json
